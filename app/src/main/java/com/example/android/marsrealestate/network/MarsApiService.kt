@@ -42,8 +42,7 @@ private val retrofit = Retrofit.Builder()
 
 interface MarsApiService {
     @GET("realestate") // suspending it makes deferred
-    suspend fun getProperties():
-            Call<List<MarsProperty>>
+    suspend fun getProperties(): List<MarsProperty>
 }
 object MarsApi{
     val retrofitService : MarsApiService by lazy {
